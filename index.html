@@ -88,81 +88,12 @@
               <th>Status</th>
             </tr>
           </thead>
-          <tbody id="patientsTable">
-            <tr>
-              <td class="name">Christian Henrique</td>
-              <td>13</td>
-              <td>52kg</td>
-              <td>1.73m</td>
-              <td>
-                <select id="status" onchange="updateSelectToContaminated(this)">
-                  <option value="normal">Normal</option>
-                  <option value="contaminated">Contaminated</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td class="name">Christian Henrique</td>
-              <td>13</td>
-              <td>52kg</td>
-              <td>1.73m</td>
-              <td>
-                <select id="status" onchange="updateSelectToContaminated(this)">
-                  <option value="normal">Normal</option>
-                  <option value="contaminated">Contaminated</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td class="name">Christian Henrique</td>
-              <td>13</td>
-              <td>52kg</td>
-              <td>1.73m</td>
-              <td>
-                <select id="status" onchange="updateSelectToContaminated(this)">
-                  <option value="normal">Normal</option>
-                  <option value="contaminated">Contaminated</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td class="name">Christian Henrique</td>
-              <td>13</td>
-              <td>52kg</td>
-              <td>1.73m</td>
-              <td>
-                <select id="status" onchange="updateSelectToContaminated(this)">
-                  <option value="normal">Normal</option>
-                  <option value="contaminated">Contaminated</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td class="name">Christian Henrique</td>
-              <td>13</td>
-              <td>52kg</td>
-              <td>1.73m</td>
-              <td>
-                <select id="status" onchange="updateSelectToContaminated(this)">
-                  <option value="normal">Normal</option>
-                  <option value="contaminated">Contaminated</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td class="name">Christian Henrique</td>
-              <td>13</td>
-              <td>52kg</td>
-              <td>1.73m</td>
-              <td>
-                <select id="status" onchange="updateSelectToContaminated(this)">
-                  <option value="normal">Normal</option>
-                  <option value="contaminated">Contaminated</option>
-                </select>
-              </td>
-            </tr>
-          </tbody>
+          <tbody id="patientsTable"></tbody>
         </table>
+        <div id="no-patients">
+          <img src="./public/user.svg" alt="Icon of user" />
+          <p>No patients founded</p>
+        </div>
       </main>
       <div class="modal-shadow">
         <div class="modal">
@@ -204,7 +135,7 @@
               <button type="button" onclick="closeModal()" id="cancel">
                 Cancel
               </button>
-              <button type="button" onclick="closeModal()" id="send">
+              <button type="button" onclick="submitInfo()" id="send">
                 Apply
               </button>
             </div>

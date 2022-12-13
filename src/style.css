@@ -265,6 +265,22 @@ main table tbody tr td select option {
   color: var(--gray);
 }
 
+#no-patients {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+#no-patients img {
+  width: 5rem;
+}
+
+#no-patients p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+
+  color: var(--white-second);
+}
+
 /* MODAL */
 body.modal-active {
   overflow: hidden;
