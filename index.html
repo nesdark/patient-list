@@ -7,142 +7,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patients List</title>
+    <title>Guess Game</title>
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat&family=Unbounded:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Montserrat+Alternates:wght@600&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div class="app">
-      <nav>
-        <div class="group-logo">
-          <h2 id="logo">
-            <img src="./public/logo.webp" alt="dada" />
-          </h2>
-          <ul>
-            <li>
-              <a href="#"
-                ><img src="./public/money.svg" alt="Icon, of Money"
-              /></a>
-            </li>
-            <li>
-              <a href="#">
-                <img
-                  src="./public/notification.svg"
-                  alt="Icon of notification "
-                />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./public/setting.svg" alt="Icon of Gear" />
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="group-search">
-          <div class="menu">
-            <div class="search">
-              <label for="search">
-                <img src="./public/search.svg" alt="Icon, Search" />
-              </label>
-              <input
-                type="search"
-                id="search"
-                placeholder="What are you looking for?"
-              />
-            </div>
-            <ul class="links">
-              <a href="#"><li>Home</li></a>
-              <a href="#"><li>About</li></a>
-              <a href="#"><li>Store</li></a>
-            </ul>
-          </div>
-          <button>
-            <div class="button-menu">
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-            </div>
+      <main id="box">
+        <h2>Guess Game</h2>
+        <p>Guess the number between 0 and 10</p>
+        <form class="container">
+          <input type="number" placeholder="5" id="attempt" />
+          <button id="try" type="button" onclick="tryAttempt()">
+            Check Result
           </button>
-        </div>
-      </nav>
-      <header>
-        <h1>Add patient</h1>
-        <button onclick="openModal()">
-          <img src="./public/plus.svg" alt="Icon, add" />
-        </button>
-      </header>
-      <main>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Age</th>
-              <th>Weight</th>
-              <th>Height</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody id="patientsTable"></tbody>
-        </table>
-        <div id="no-patients">
-          <img src="./public/user.svg" alt="Icon of user" />
-          <p>No patients founded</p>
-        </div>
+        </form>
+        <div id="when-fail"></div>
       </main>
-      <div class="modal-shadow">
-        <div class="modal">
-          <h2>Add patient</h2>
-          <form action="">
-            <label>
-              Name
-              <input
-                type="text"
-                id="patientName"
-                required
-                placeholder="Gabriel Martins"
-              />
-            </label>
-            <label>
-              Age
-              <input type="number" id="patientAge" required placeholder="18" />
-            </label>
-            <label>
-              <div>Weight <small>(kg)</small></div>
-              <input
-                type="number"
-                id="patientWeight"
-                required
-                placeholder="75kg"
-              />
-            </label>
-            <label>
-              <div>Height <small>(meters)</small></div>
-
-              <input
-                type="number"
-                id="patientHeight"
-                required
-                placeholder="1.80m"
-              />
-            </label>
-            <div class="buttons">
-              <button type="button" onclick="closeModal()" id="cancel">
-                Cancel
-              </button>
-              <button type="button" onclick="submitInfo()" id="send">
-                Apply
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
     </div>
-    <script src="./src/script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
